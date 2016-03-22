@@ -1,0 +1,173 @@
+# Trailblazer pathology image processor script
+# Copyright (C) 2016 Cancer Research UK
+#
+# This file is part of Trailblazer - Cancer Research UK's citizen science project for immunohistochemistry (IHC) scoring.
+#
+# Trailblazer is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CRUK; Contribute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//citscitools.cancerresearchuk.org/static/vendor/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="//citscitools.cancerresearchuk.org/static/css/fonts/stylesheet.css" rel="stylesheet">
+    <link href="//citscitools.cancerresearchuk.org/static/css/styles.css" rel="stylesheet">
+
+    <link href="//citscitools.cancerresearchuk.org/static/css/slick.css" rel="stylesheet">
+    <link href="//citscitools.cancerresearchuk.org/static/css/slick-theme.css" rel="stylesheet">
+    <link href="//citscitools.cancerresearchuk.org/static/css/nouislider.css" rel="stylesheet">
+
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/vendor/jquery.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/vendor/bootstrap/2.2.1/js/bootstrap.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/vendor/modernizr.min.js"></script>
+
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/vendor/jquery.elevateZoom.min.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/vendor/raphael-min.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/vendor/device.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/vendor/jquery.cookie.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/vendor/slick.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/vendor/nouislider.min.js"></script>
+
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/grid.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/zoom.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/tutorial.js"></script>
+    <script type="text/javascript" src="//citscitools.cancerresearchuk.org/static/js/app.js"></script>
+
+
+    </script>
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            $.urlParam = function (name, if_not_found) {
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                if (results && results.length > 0)
+                    return results[1];
+                return if_not_found;
+            };
+            //pybossa.setEndpoint("http://localhost:5000");
+            pybossa.setEndpoint("//citscitools.cancerresearchuk.org/");
+            var view = $.urlParam("view", "mechanic");
+            if (!view || view == "mechanic")
+                $("#template-container").load("template.html");
+            else
+                $("#template-container").load("tutorial.html", function(){
+                    $(".modal-footer").prepend('' +
+                        '<button type="button" class="btn btn-default pull-left" data-dismiss="modal" aria-hidden="true">' +
+                        '   Close' +
+                        '</button>');
+                     var $button = $("<button>");
+                    $button
+                        .attr("class", "btn btn-primary")
+                        .html("Open Modal")
+                        .on("click", function(e){
+                            e.preventDefault();
+                            e.stopPropagation();
+                            $("#modal").modal('show');
+                        });
+                    $("#template-container").prepend($button);
+                });
+            $(".nav > li").removeClass("active");
+            $("#" + view).addClass("active");
+        });
+    </script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">
+                <img src="//citscitools.cancerresearchuk.org/static/img/cruk/cruk-logo-tiny.png" alt="CRUK" style="position:relative; top:0px;">
+            </a>
+            <ul class="nav">
+                <li class="active" id="tutorial">
+                    <a href="?view=tutorial">Tutorial</a>
+                </li>
+                <li class="active" id="mechanic">
+                    <a href="?view=mechanic">Mechanic</a>
+                </li>
+            </ul>
+            <h4 class="pull-right" style="position: relative; top: 0px;">CRUK - Citizen Science - Project Testharness</h4>
+        </div>
+    </div>
+</div>
+<div class="container" style="min-height:400px;">
+    <div class="alert-messages"></div>
+    <script>
+        Modernizr.load({
+            test: window.JSON,
+            nope: '//citscitools.cancerresearchuk.org/static/js/vendor/json2.min.js'
+        });
+    </script>
+    <!--
+      If developing locally use the local version of PyBossa. Remember to change this before commiting.
+    -->
+    <script src="//citscitools.cancerresearchuk.org/static/js/pybossa/pybossa.js" type="text/javascript"></script>
+    <!-- <script src="pybossa.js" type="text/javascript"></script> -->
+
+    <div style="width: 90%; margin: 20px auto; display: none;" class="alert alert-info media">
+        <span class="icon-info-sign icon-3x pull-left media-object"></span>
+
+        <div class="media-body">
+            <h3 class="media-title">Attention</h3>
+
+            <p>
+                You are currently viewing a test harness page that allows you to conduct project development for
+                the PyBossa Citizen Science engine hosted by Cancer Research UK
+            </p>
+        </div>
+    </div>
+
+    <div id="template-container"></div>
+
+    <div id='PYBOSSA_USER_LOCALE' hidden>en</div>
+</div>
+<div id="cookies_warning" style="display: none;">
+    <p>Cookies help us deliver our services. By using our services, you agree to our use of cookies.</p>
+        <div class="cookies_warning-buttons">
+            <button class="btn btn-mini btn-success" onclick="accept_cookies.acceptCookies()">
+                <i class="icon-thumbs-up"></i> OK</button>
+            <a class="btn btn-mini" href="http://www.cancerresearchuk.org/terms-and-conditions/cookies-policy">
+                <i class="icon-info-sign"></i>
+                More info
+            </a>
+        </div>
+</div>
+<script type="text/javascript" language="javascript">
+     // Cookie notice.
+
+     var accept_cookies = {
+         // Get cookie
+         cookiesAcceptedAlready: $.cookie('cookiesAccepted'),
+         // Target cookie notice div
+         $cookieNotice: $('#cookies_warning'),
+         init: function() {
+             if (this.cookiesAcceptedAlready) {
+                 return;
+             } else {
+                 this.$cookieNotice.show();
+             }
+         },
+         acceptCookies: function() {
+             // Create cookie
+             $.cookie('cookiesAccepted', 'true');
+             accept_cookies.$cookieNotice.hide();
+         }
+     }
+
+     accept_cookies.init();
+</script>
+</body>
+</html>

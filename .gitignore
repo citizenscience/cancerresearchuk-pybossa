@@ -1,0 +1,6 @@
+env/
+*.un~
+.*.swp
+*.pyc
+*.db
+.idea

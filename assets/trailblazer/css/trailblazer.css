@@ -1,0 +1,814 @@
+/*
+   .canvas grid 10 and #photo-link image is at z-index of 5
+*/
+.ios .wrappy,
+.ipad .wrappy,
+.mobile .wrappy,
+.tablet .wrappy,
+.andriod .wrappy,
+.androidTablet .wrappy,
+.blackberry .wrappy {
+    display: block;
+}
+
+.wrappy {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 1.2;
+    z-index: 1100;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.device-message {
+    font-size: 0;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.casper {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.device-message-inner {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 38px;
+    background-color: white;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 190px
+}
+
+.loader span {
+    position: absolute;
+    bottom: -40px;
+    width: 130px;
+    margin-left: -40px;
+}
+
+.loader .loader-circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.loader .loader-circle:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    height: 15%;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: loader-circleFadeDelay 1.2s infinite ease-in-out both;
+    animation: loader-circleFadeDelay 1.2s infinite ease-in-out both;
+}
+
+.loader .loader-circle2 {
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.loader .loader-circle3 {
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.loader .loader-circle4 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.loader .loader-circle5 {
+    -webkit-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+
+.loader .loader-circle6 {
+    -webkit-transform: rotate(150deg);
+    -ms-transform: rotate(150deg);
+    transform: rotate(150deg);
+}
+
+.loader .loader-circle7 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.loader .loader-circle8 {
+    -webkit-transform: rotate(210deg);
+    -ms-transform: rotate(210deg);
+    transform: rotate(210deg);
+}
+
+.loader .loader-circle9 {
+    -webkit-transform: rotate(240deg);
+    -ms-transform: rotate(240deg);
+    transform: rotate(240deg);
+}
+
+.loader .loader-circle10 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.loader .loader-circle11 {
+    -webkit-transform: rotate(300deg);
+    -ms-transform: rotate(300deg);
+    transform: rotate(300deg);
+}
+
+.loader .loader-circle12 {
+    -webkit-transform: rotate(330deg);
+    -ms-transform: rotate(330deg);
+    transform: rotate(330deg);
+}
+
+.loader .loader-circle2:before {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.loader .loader-circle3:before {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.loader .loader-circle4:before {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.loader .loader-circle5:before {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+.loader .loader-circle6:before {
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+}
+
+.loader .loader-circle7:before {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.loader .loader-circle8:before {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.loader .loader-circle9:before {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+
+.loader .loader-circle10:before {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+.loader .loader-circle11:before {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+}
+
+.loader .loader-circle12:before {
+    -webkit-animation-delay: -0.1s;
+    animation-delay: -0.1s;
+}
+
+@-webkit-keyframes loader-circleFadeDelay {
+    0%,
+    39%,
+    100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+@keyframes loader-circleFadeDelay {
+    0%,
+    39%,
+    100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+/*.canvas is at z-index of 10*/
+
+#feedbackPhotoWrapper,
+#photo-link {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    min-height: 460px;
+}
+
+.modal {
+    z-index: 3 !important;
+}
+
+.modal-backdrop {
+    z-index: 2 !important;
+}
+
+.site-content #canvas, .site-content #feedbackCanvas, .site-content #mechanicCanvas {
+    z-index: 1 !important;
+}
+
+.grid-info {
+    margin-bottom: 20px;
+    overflow: auto;
+    height: 460px;
+}
+
+.grid-info ol {
+    margin-top: 20px;
+}
+
+.grid-info ol li {
+    margin-bottom: 10px;
+}
+
+.zoomWindow {
+    border: 0 !important;
+}
+
+h2 {
+    line-height: 1.4;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.square-red {
+    background-color: rgba(231, 76, 60, .8);
+}
+
+.square-green {
+    background-color: rgba(0, 163, 136, .5);
+}
+
+#pathologistFeedback {
+    margin-bottom: 0 !important;
+}
+
+main {
+    position: relative;
+}
+
+.mechanic-content,
+.feedback-content,
+.grid-info {
+    position: relative;
+}
+
+.legend {
+    position: absolute;
+    left: -198px;
+    width: 200px;
+    top: 47px;
+    text-align: right;
+}
+
+.legend-item {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.legend-item i {
+    font-size: 30px;
+    display: inline-block;
+    color: black;
+    vertical-align: middle;
+}
+
+.example-list {
+    display: none;
+    margin-bottom: 0 !important;
+}
+
+.grid-info-buttons {
+    position: absolute;
+    bottom: 20px;
+    margin-top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    padding-left: 20px;
+    width: 91%;
+}
+
+.taskFeedback {
+    display: none;
+}
+
+.slick-prev,
+.slick-next {
+    background-color: transparent;
+    display: block;
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: -20px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px;
+    color: black;
+    background-color: transparent;
+}
+
+.slick-prev,
+.slick-next {
+    background-color: transparent;
+    display: block;
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: -20px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px;
+    color: black;
+    background-color: transparent;
+}
+
+.slick-prev {
+    left: -55px;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.slick-next {
+    right: -55px;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.grid-info-content-inner {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+}
+
+.feedback-active .mechanic-active {
+    display: none;
+}
+
+.mechanic-active .feedback-show {
+    display: none;
+}
+
+.mechanic-active .modal #0 {
+    display: none;
+}
+
+.example-list-item .description.orange-cancer {
+    background-color: rgba(255, 165, 0, 0.7);
+}
+
+#skipSlideModal.modal {
+    z-index: 3 !important;
+}
+
+.skipReason {
+    padding-top: 15px;
+}
+
+.skipReason .skipReason-choice {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skipReason .skipReason-choice input {
+    margin-top: 0;
+}
+
+.skipReason .skipReason-choice span {
+    padding-top: 2px;
+    position: relative;
+    display: inline-block;
+    max-width: 70%;
+    vertical-align: top;
+    margin-left: 3%;
+}
+
+.zoomContainer, .zoomWindow {
+    z-index: 4 !important;
+}
+
+#intensity-slider-pips, #feedback-intensity-slider-pips {
+    margin-top: 10px;
+    position: relative;
+    height: 40px;
+}
+
+#intensity-slider-pips > span, #feedback-intensity-slider-pips > span {
+    position: absolute;
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+}
+
+#feedback-intensity-slider-pips .intensity-slider-pips__moderate {
+    left: 45%;
+}
+
+.intensity-slider-pips__weak {
+    left: 0;
+}
+
+.intensity-slider-pips__moderate {
+    left: 45%;
+}
+
+.intensity-slider-pips__strong {
+    right: 0;
+}
+
+.proportion-slider__container {
+    min-height: 110px;
+    margin-bottom: 10px;
+}
+
+.proportion-slider__valueContainer {
+    margin-top: 58px;
+}
+
+.proportion-slider__valueContainer > div {
+    display: inline;
+}
+
+.proportion-slider__value {
+    color: #333333;
+    font-weight: bold;
+}
+
+.sliderPipActive {
+    color: #333333 !important;
+}
+
+.imgId {
+    padding-top: 20px;
+}
+
+.unFocus {
+    fill: #ffffff;
+    opacity: 0.8;
+}
+
+.unRed {
+    fill: transparent;
+}
+
+.user-cancer-question {
+    margin-top: 20px;
+}
+
+.user-cancer-question input {
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.radio-spacing {
+    display: block;
+    margin-top: 10px;
+}
+
+.user-cancer-question span {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* Tutorial */
+.zoomContainer {
+    z-index: 2000;
+}
+
+.modal {
+    margin-left: -400px;
+    top: 45%;
+    width: 800px;
+    z-index: 1999 !important;
+}
+
+.modal .modal-body {
+    display: table;
+    max-height: 600px;
+    padding: 0;
+    z-index: 1200 !important;
+}
+
+.modal .modal-body .modal-image {
+    float: left;
+    width: 460px;
+    word-break: keep-all;
+}
+
+.modal .modal-body .modal-info {
+    float: left;
+    padding: 20px;
+    width: 300px;
+    word-break: keep-all;
+}
+
+.modal .modal-body .carousel {
+    margin-bottom: 0;
+}
+
+.modal .modal-body .carousel-control {
+    top: 50%;
+}
+
+.modal-backdrop {
+    z-index: 1000 !important;
+}
+
+.carousel-indicators-custom {
+    bottom: 15px;
+    position: absolute;
+    right: -325px;
+    text-align: center;
+}
+
+.carousel-indicators-custom div {
+    background-color: #efefef;
+    cursor: pointer;
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 10px;
+    padding: 10px;
+    width: 20px;
+}
+
+.carousel-indicators-custom div.active {
+    background-color: yellow;
+    display: inline-block;
+    width: 20px;
+}
+
+.modal-info .item-inner {
+    display: none;
+}
+
+.modal-info .item-inner.active {
+    display: block;
+}
+
+.wrappy {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    height: 100%;
+    left: 0;
+    line-height: 1.2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3000 !important;
+}
+
+.wrappy.active,
+.ios .wrappy,
+.ipad .wrappy,
+.mobile .wrappy,
+.tablet .wrappy,
+.andriod .wrappy,
+.androidTablet .wrappy,
+.blackberry .wrappy {
+    display: block;
+}
+
+.device-message {
+    font-size: 0;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.casper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.device-message-inner {
+    background-color: white;
+    display: inline-block;
+    padding: 38px;
+    vertical-align: middle;
+    width: 50%;
+}
+
+/* Mechanic */
+.grid-info {
+    background-color: #efefef;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.grid-info span {
+    font-size: 18px;
+}
+
+.grid-wrapper {
+    height: 460px;
+    position: relative;
+}
+
+.grid {
+    border-spacing: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.site-content .img-polaroid {
+    height: auto;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.site-content rect.grid-item.grid-item-success {
+    fill: rgba(231, 76, 60, 0.8);
+}
+
+.site-content rect.grid-item.grid-item-error {
+    fill: rgba(0, 163, 136, 0.5);
+}
+
+.site-content rect.grid-item.agree {
+    fill: #e74c3c;
+}
+
+.site-content rect.grid-item.disagree {
+    fill: #00a388;
+}
+
+.site-content #zoom_01 {
+    width: 400px;
+}
+
+.site-content #canvas,
+.site-content #feedbackCanvas,
+.site-content #mechanicCanvas {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.site-content .nextSlideBtn {
+    float: right;
+}
+
+.site-content #difficulty {
+    width: 100%;
+}
+
+.site-content .progress {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.zoomLens {
+    height: 70px;
+    width: 70px;
+}
+
+.site-header .alert {
+    text-align: center;
+}
+
+.zoomWindowContainer:after {
+    content: " ";
+    height: 40px;
+    left: 50%;
+    margin-bottom: -20px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+}
+
+/* Examples */
+.example-list {
+    margin-bottom: 40px;
+}
+
+.example-list-item {
+    box-sizing: border-box;
+    float: left;
+    margin: 0;
+    margin-right: 5px;
+    overflow: hidden;
+    position: relative;
+    width: 20%;
+}
+
+.example-list-item:hover .description {
+    left: 0;
+    opacity: 1;
+}
+
+.example-list-item .description {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: block;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+.example-list-item .description.cancer {
+    background-color: rgba(231, 76, 60, 0.8);
+}
+
+.example-list-item .description.non-cancer {
+    background-color: rgba(0, 163, 136, 0.7);
+}
+
+.example-list-item.last {
+    margin-right: 0;
+}
+
+/* Slick Slider */
+.slick-disabled {
+    background-color: transparent;
+}
+
+.slick-prev,
+.slick-next {
+    background-color: transparent;
+    display: block;
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: -20px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px;
+    color: black;
+    background-color: transparent;
+}
+
+.slick-prev {
+    left: -55px;
+}
+
+.slick-next {
+    right: -55px;
+}
