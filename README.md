@@ -63,3 +63,14 @@ $ pbs --server http://localhost:5000 --api-key [YOUR_API_KEY_HERE] update_projec
 - Click the `You can now publish it` button
 - Confirm by clicking `yes publish`
 - Click the `contribute now` button to start contributing
+
+## Copyright / Licence
+
+Copyright 2016 Cancer Research UK
+
+Source Code License: The GNU Affero General Public License, either version 3 of the License or (at your option) any later version. (See agpl.txt file)
+
+The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure 
+cooperation with the community in the case of network server software.
+
+Documentation is under a Creative Commons Attribution Noncommercial License version 3.
