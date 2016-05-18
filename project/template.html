@@ -1463,7 +1463,7 @@
 
     var project_short_name = "{{ project.short_name }}";
     if (project_short_name === "")
-        project_short_name = "tb2-r2.1-cc";
+        project_short_name = "cancerresearchuk";
 
     var cookie_feedback_name = project_short_name + 'feedback';
     var cookie_tutorial_name = project_short_name + 'tutorial';
@@ -3845,7 +3845,7 @@
      */
 
     function loadUserProgress() {
-        pybossa.userProgress('tb2-r2.1-cc').done(function (data) {
+        pybossa.userProgress('cancerresearchuk').done(function (data) {
             checkTask = data.done;
             var currentTask = data.done + 1;
             $("#tasksCompleted").text(currentTask + " of " + 10);
@@ -4973,7 +4973,7 @@
             $("body").addClass("mechanic-active");
             $("body").removeClass("feedback-active");
             $("#mechanicContent").show();
-            pybossa.run("tb2-r2.1-cc");
+            pybossa.run("cancerresearchuk");
         }
     }
 
