@@ -6,8 +6,9 @@
         font-size: 22px;
     }
 
-    #stage {
+    .stage {
         display:none;
+        height: 460px;
     }
     .modal-dialog {
         width: 900px;
@@ -177,7 +178,7 @@
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="active item">
-                        <div id="stage" style="height:460px"></div>
+                        <div class="stage"></div>
                         <a class="magnifik" href="/static/trailblazer/images/lung_egfr/EGFR-23.jpg">
                         <img class="tutorial-img" src="/static/trailblazer/images/lung_egfr/min/EGFR-23-min.jpg" alt=""/>
                         </a>
@@ -202,8 +203,11 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img class="tutorialZoom4" src="/static/trailblazer/images/lung_egfr/tutorial/lung-egfr-gt-11-cancer-area.jpg"
+                        <div class="stage"></div>
+                        <a class="magnifik" href="/static/trailblazer/images/lung_egfr/tutorial/lung-egfr-gt-11-cancer-area.jpg">
+                        <img class="tutorial-img tutorialZoom4" src="/static/trailblazer/images/lung_egfr/tutorial/lung-egfr-gt-11-cancer-area.jpg"
                         data-zoom-image="/static/trailblazer/images/lung_egfr/tutorial/lung-egfr-gt-11-cancer-area.jpg" alt=""/>
+                    </a>
 
                         <div class="item-inner">
                             <h1>
@@ -217,8 +221,11 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img class="tutorialZoom4" src="/static/trailblazer/images/lung_egfr/tutorial/lung-egfr-gt-11-non-cancer-area.jpg"
+                        <div class="stage"></div>
+                        <a class="magnifik" href="/static/trailblazer/images/lung_egfr/tutorial/lung-egfr-gt-11-non-cancer-area.jpg">
+                        <img class="tutorial-img tutorialZoom4" src="/static/trailblazer/images/lung_egfr/tutorial/lung-egfr-gt-11-non-cancer-area.jpg"
                         data-zoom-image="/static/trailblazer/images/lung_egfr/tutorial/lung_egfr-gt-11-non-cancer-area.jpg" alt=""/>
+                        </a>
 
                         <div class="item-inner">
                             <h1>
@@ -1008,17 +1015,17 @@ prevBtn.onclick = function () {
     showStep('prev');
 };
 
-$("a.magnifik").magnifik({seekImage: false, ratio: 3, activationEvent:'click', stage: $("#stage")});
+$("a.magnifik").magnifik({seekImage: false, ratio: 3, activationEvent:'click', stage: $(".stage")});
 
 $("body").bind('magnifik:open', function(){
                 console.log("show");
-                $("#stage").show();
+                $(".stage").show();
                 $(".tutorial-img").hide();
                 });
 
 $("body").bind('magnifik:close', function(){
         console.log("hide");
-        $("#stage").hide();
+        $(".stage").hide();
         $(".tutorial-img").show();
         });
 
