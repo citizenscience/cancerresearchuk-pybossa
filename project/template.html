@@ -3663,6 +3663,7 @@
             var $activeImgItem = $(this.modal + " #" + this.step + " .carousel-inner .item.active img");
 
             $activeImgItem.elevateZoom({
+                zoomType: "inner",
                 zoomWindowPosition: "",
                 lensFadeIn: 500,
                 lensFadeOut: 500,
@@ -3769,11 +3770,12 @@
             var $currentSlideImg = $(".tutorialZoom" + $modalId)[$carouselSelectorValue];
 
             $($currentSlideImg).elevateZoom({
+                zoomType: "inner",
                 zoomWindowPosition: "",
                 lensFadeIn: 500,
                 lensFadeOut: 500,
-                zoomWindowHeight: 300,
-                zoomWindowWidth: 300,
+                zoomWindowHeight: 460,
+                zoomWindowWidth: 460,
                 cursor: "pointer"
             });
 
