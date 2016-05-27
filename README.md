@@ -27,6 +27,8 @@ two lines. Note that they should be indented.
 ```
 $ cd pybossa
 $ vagrant up
+$ vagrant ssh
+$ python run.py
 ```
 
 ###### Create an Account on pybossa
