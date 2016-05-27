@@ -52,7 +52,7 @@ $ python run.py
 - Copy and save the `API Key` shown on your profile page
 
 ###### Upload the CRUK Project to pybossa
-Starting from the directory where this readme file is located:
+Starting from the folder where this readme file is located (normally cancerresearchuk-pybossa)
 
 Note: the location of your python2.7 executable may be different
 
@@ -67,11 +67,10 @@ $ pbs --server http://localhost:5000 --api-key [YOUR_API_KEY_HERE] update_projec
 ```
 
 ###### Visit pybossa and publish your project
-- Go to `http://localhost:5000`
-- Click on `projects` in the top nav
-- Click on `draft` in the left hand nav
-- Choose your project
-- Click the `You can now publish it` button
+- Click on the user icon in the top right of pybossa
+- Choose `My projects` from the drop down menu
+- Click `More info` on teh CRUK Trailblazer project
+- Click on `Publish it` in the top left
 - Confirm by clicking `yes publish`
 - Click the `contribute now` button to start contributing
 
