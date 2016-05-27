@@ -12,6 +12,13 @@ funded Citizen Science project within a [pybossa](http://pybossa.com/) server.
 $ git clone --recursive https://github.com/PyBossa/pybossa.git
 ```
 
+
+###### Clone the CRUK repo
+```
+$ git clone --recursive https://github.com/citizenscience/cancerresearchuk-pybossa.git
+```
+
+
 ###### Edit the VagrantFile to include the image, styles and scripts needed to run the project
 Edit the `VagrantFile` from within the pybossa directory created following the repo clone.
 
@@ -33,7 +40,7 @@ $ python run.py
 
 ###### Create an Account on pybossa
 - Go to `http://localhost:5000`
-- Click `sign in` then `create an account`
+- Click `sign in` then `sign up for free now`
 - Enter the details needed to create an account
 - Complete creating an account but clicking `create an account`
 
