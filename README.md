@@ -20,10 +20,12 @@ $ git clone --recursive https://github.com/citizenscience/cancerresearchuk-pybos
 
 
 ###### Edit the VagrantFile to include the image, styles and scripts needed to run the project
-Edit the `VagrantFile` from within the pybossa directory created following the repo clone.
+Edit the `VagrantFile` in the pybossa folder created by the repo clone.
 
-Inside the `Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|` block before the `end` statement, add the following
+Inside the block starting with`Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|`  before the `end` statement, add the following
 two lines. Note that they should be indented.
+
+And note that `PATH_TO_DIRECTORY_CONTAINING_THIS_README_FILE` refers to the cancerresearchuk-pybossa folder NOT the pybossa folder
 
 ```
     # Config required to link the CRUK static assets to the CRUK project
