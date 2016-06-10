@@ -22,8 +22,9 @@ applicable across a range of types of tissue image.
 # The Software
 
 Trailblazer was written using the [PyBossa citizen science platform] (http://pybossa.com).
-The JavaScript web UI was developed using a [lean startup] (https://en.wikipedia.org/wiki/Lean_startup) approach.   The UI was therefore 
-developed only to the extent necessary to evaluate the way information was presented and the nature of user interaction.   The UI is not a polished finished product.  
+The JavaScript web UI was developed using a [lean startup] (https://en.wikipedia.org/wiki/Lean_startup) approach.
+The UI was therefore developed only to the extent necessary to evaluate the way information was presented and the nature of user interaction. 
+The UI is not a polished finished product.
 Similarly the source code is fit for purpose in the same way - it does not necessarilly conform to coding best practice.
 
 # Further Info
