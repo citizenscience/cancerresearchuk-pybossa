@@ -44,7 +44,6 @@ $ python run.py
 - Go to `http://localhost:5000`
 - Click `sign in` then `sign up for free now`
 - Enter the details needed to create an account
-- Complete creating an account but clicking `create an account`
 
 ###### Take note of your api key
 - Click on the user icon in the top right of pybossa
@@ -69,7 +68,7 @@ $ pbs --server http://localhost:5000 --api-key [YOUR_API_KEY_HERE] update_projec
 ###### Visit pybossa and publish your project
 - Click on the user icon in the top right of pybossa
 - Choose `My projects` from the drop down menu
-- Click `More info` on teh CRUK Trailblazer project
+- Click `More info` on the CRUK Trailblazer project
 - Click on `Publish it` in the top left
 - Confirm by clicking `yes publish`
 - Click the `contribute now` button to start contributing
