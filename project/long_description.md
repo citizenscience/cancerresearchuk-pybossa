@@ -1,43 +1,38 @@
-# CRUK Project Template!
+# Trailblazer Demo!
 
-This is a template project, designed to be the starting point of all new 
-project development within CRUK for the PyBossa Citizen Science engine.
+This project is a demo version of the Trailbalzer project created by Cancer Research UK.
 
-This project is based on the Flickr person app from PyBossa
+# The Trailblazer Project
 
-# Original long description now follows
+The original Trailblazer project explored different approaches to crowdsourcing pathology analysis.
+Through 15 iterations we refined and optimised the interface in many different ways, each validated by 
+statistical analysis of resulting changes in accuracy. 
+Trailblazer enabled us to demonstrate that crowdsourcing can be employed to deliver high-quality cancer pathology analysis, 
+through close collaboration with researchers and agile, iterative development processes. 
+We were able to achieve an accuracy, relative to trained experts of greater than 95% across multiple cancer types and 
+by combining results from fewer than 10 untrained, non-specialist users.
 
-Flickr Person is a **demo application** for PyBossa that shows how you can
-crowdsourcing an image classification problem.
+# Pathology Data
 
-This application uses the Flickr web service as the source of the data. By
-using Flickr, we have the possibility of using its API to refine the searches,
-and looking for specific tags or descriptions that match a specific criteria,
-i.e. houses of 1920 or tsunami.
+The images included in this demo are of lung tissue, most of which include cancer cells.
+The tissue samples are about 0.6mm across and have been stained to highlight [EGFR] (https://en.wikipedia.org/wiki/Epidermal_growth_factor_receptor).
+The project also worked with other tissue types - bladder and oesophageal - and other stain types - ki67, p53 - to ensure the approach was
+applicable across a range of types of tissue image.
 
-In this demo application, we use a very simple approach by polling the latest
-20 published photos in the public Flickr feed.
+# The Software
 
-The feed provides the direct link to the photo. This link is used to show the
-image to the users, and ask them the following question: **Do you see a human
-in this photo?**
+Trailblazer was written using the [PyBossa citizen science platform] (http://pybossa.com).
+The JavaScript web UI was developed using a [lean startup] (https://en.wikipedia.org/wiki/Lean_startup) approach.  
+The UI was therefore developed only to the extent necessary to evaluate the way information was presented and the nature of user interaction.  
+The UI is not a polished finished product.  
+Similarly the source code is fit for purpose in the same way - it does not necessarilly conform to coding best practice.
 
-The application provides three simple answers as action buttons:
+# Further Info
 
-  * Yes
-  * No and
-  * I don't know
+To find out more have a look at...
 
-Based on the answer of the users, we will be able to classify the photos,
-distributing the tasks (thanks to PyBossa) to different users and volunteers.
+ * [Cancer Research UK Citizen Science] (http://www.cancerresearchuk.org/support-us/citizen-science)
+ * [Trailblazer poster] (https://www.cancerresearchuk.org/sites/default/files/trailblazer_results_poster_ncri_2015_0.pdf) 
+ presented at the National Cancer Research Institute (NCRI) Conference 2015
 
-__ Note If you want to learn more about how to use this application as a
-template, check the:
-
-  * [source code](http://github.com/PyBossa/app-flickrperson)
-  * [ Google Spreadsheet Task Template](https://docs.google.com/spreadsheet/ccc?key=0AsNlt0WgPAHwdHFEN29mZUF0czJWMUhIejF6dWZXdkE&usp=sharing#gid=0)
-  * [the official documentation of PyBossa](http://docs.pybossa.com/) and 
-  * [the step by step tutorial.](http://docs.pybossa.com/en/latest/user/tutorial.html)
-
-* * *
-
+ 
