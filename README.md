@@ -12,11 +12,20 @@ funded Citizen Science project within a [pybossa](http://pybossa.com/) server.
 $ git clone --recursive https://github.com/PyBossa/pybossa.git
 ```
 
-###### Edit the VagrantFile to include the image, styles and scripts needed to run the project
-Edit the `VagrantFile` from within the pybossa directory created following the repo clone.
 
-Inside the `Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|` block before the `end` statement, add the following
+###### Clone the CRUK repo
+```
+$ git clone --recursive https://github.com/citizenscience/cancerresearchuk-pybossa.git
+```
+
+
+###### Edit the VagrantFile to include the image, styles and scripts needed to run the project
+Edit the `VagrantFile` in the pybossa folder created by the repo clone.
+
+Inside the block starting with`Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|`  before the `end` statement, add the following
 two lines. Note that they should be indented.
+
+And note that `PATH_TO_DIRECTORY_CONTAINING_THIS_README_FILE` refers to the cancerresearchuk-pybossa folder NOT the pybossa folder
 
 ```
     # Config required to link the CRUK static assets to the CRUK project
@@ -27,13 +36,14 @@ two lines. Note that they should be indented.
 ```
 $ cd pybossa
 $ vagrant up
+$ vagrant ssh
+$ python run.py
 ```
 
 ###### Create an Account on pybossa
 - Go to `http://localhost:5000`
-- Click `sign in` then `create an account`
+- Click `sign in` then `sign up for free now`
 - Enter the details needed to create an account
-- Complete creating an account but clicking `create an account`
 
 ###### Take note of your api key
 - Click on the user icon in the top right of pybossa
@@ -41,7 +51,7 @@ $ vagrant up
 - Copy and save the `API Key` shown on your profile page
 
 ###### Upload the CRUK Project to pybossa
-Starting from the directory where this readme file is located:
+Starting from the folder where this readme file is located (normally cancerresearchuk-pybossa)
 
 Note: the location of your python2.7 executable may be different
 
@@ -56,11 +66,10 @@ $ pbs --server http://localhost:5000 --api-key [YOUR_API_KEY_HERE] update_projec
 ```
 
 ###### Visit pybossa and publish your project
-- Go to `http://localhost:5000`
-- Click on `projects` in the top nav
-- Click on `draft` in the left hand nav
-- Choose your project
-- Click the `You can now publish it` button
+- Click on the user icon in the top right of pybossa
+- Choose `My projects` from the drop down menu
+- Click `More info` on the CRUK Trailblazer project
+- Click on `Publish it` in the top left
 - Confirm by clicking `yes publish`
 - Click the `contribute now` button to start contributing
 
