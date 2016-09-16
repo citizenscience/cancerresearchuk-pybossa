@@ -23,11 +23,23 @@ $ git clone --recursive https://github.com/citizenscience/cancerresearchuk-pybos
 ```
 
 
+###### Clone the CRUK theme repo
+```
+$ git clone --recursive https://github.com/PyBossa/cancer-default-theme pybossa/pybossa/themes/cancer-default-theme
+```
+
+
 ###### Edit the VagrantFile to include the image, styles and scripts needed to run the project
-Edit the `VagrantFile` in the pybossa folder created by the repo clone.
+First  go to the pybossa folder
+
+```
+$ cd pybossa
+```
+
+Edit `VagrantFile`.
 
 Inside the block starting with`Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|`  before the `end` statement, add the following
-two lines. Note that they should be indented.
+two lines. Note that they should be indented to the same degree as the preceeding lines
 
 And note that `PATH_TO_DIRECTORY_CONTAINING_THIS_README_FILE` refers to the cancerresearchuk-pybossa folder NOT the pybossa folder
 
@@ -36,9 +48,19 @@ And note that `PATH_TO_DIRECTORY_CONTAINING_THIS_README_FILE` refers to the canc
     config.vm.synced_folder "[PATH_TO_DIRECTORY_CONTAINING_THIS_README_FILE]/assets/trailblazer", "/vagrant/pybossa/themes/default/static/trailblazer"
 ```
 
+
+###### Edit the settings file to use the CRUK theme
+Edit 'settings_local.py.tmpl'
+
+Add the following line at the end of the file.
+
+```
+THEME = 'cancer-default-theme'
+```
+
+
 ###### Start Vagrant
 ```
-$ cd pybossa
 $ vagrant up
 $ vagrant ssh
 $ python run.py
@@ -46,7 +68,7 @@ $ python run.py
 
 ###### Create an Account on pybossa
 - Go to `http://localhost:5000`
-- Click `sign in` then `sign up for free now`
+- Click `sign in` then `create a new account`
 - Enter the details needed to create an account
 
 ###### Take note of your api key
