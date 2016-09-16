@@ -58,7 +58,7 @@ And note that `PATH_TO_DIRECTORY_CONTAINING_THIS_README_FILE` refers to the canc
 
 
 #### Edit the settings file to use the CRUK theme
-Edit 'settings_local.py.tmpl'
+Edit 'settings_local.py'
 
 Add the following line at the end of the file.
 
@@ -99,13 +99,14 @@ $ pbs --server http://localhost:5000 --api-key [YOUR_API_KEY_HERE] add_tasks --t
 $ pbs --server http://localhost:5000 --api-key [YOUR_API_KEY_HERE] update_project
 ```
 
-#### Visit pybossa and publish your project
+#### Go to pybossa website and publish your project
 - Click on the user icon in the top right of pybossa
 - Choose `My projects` from the drop down menu
-- Click `More info` on the CRUK Trailblazer project
-- Click on `Publish it` in the top left
-- Confirm by clicking `yes publish`
-- Click the `contribute now` button to start contributing
+- Click `Cancer Research UK - Trailblazer` to view project details
+- Click `Info` (top left)
+- Click `You can now publish it`
+- Confirm by clicking `Yes, publish it`
+- Click the `Start contributing now` button to start contributing
 
 ## Copyright / Licence
 
