@@ -11,6 +11,14 @@ funded Citizen Science project within a [pybossa](http://pybossa.com/) server.
 
 ## Running your own pybossa server using vagrant
 
+
+###### Prerequisites
+You need to have the following installed
+
+* [Vagrant](www.vagrantup.com)
+* [VirtualBox](www.virtualbox.org)
+* [Git](https://git-scm.com)
+
 ###### Clone the pybossa repo
 ```
 $ git clone --recursive https://github.com/PyBossa/pybossa.git
