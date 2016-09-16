@@ -12,32 +12,32 @@ funded Citizen Science project within a [pybossa](http://pybossa.com/) server.
 ## Running your own pybossa server using vagrant
 
 
-###### Prerequisites
+#### Prerequisites
 You need to have the following installed
 
 * [Vagrant](www.vagrantup.com)
 * [VirtualBox](www.virtualbox.org)
 * [Git](https://git-scm.com)
 
-###### Clone the pybossa repo
+#### Clone the pybossa repo
 ```
 $ git clone --recursive https://github.com/PyBossa/pybossa.git
 ```
 
 
-###### Clone the CRUK repo
+#### Clone the CRUK repo
 ```
 $ git clone --recursive https://github.com/citizenscience/cancerresearchuk-pybossa.git
 ```
 
 
-###### Clone the CRUK theme repo
+#### Clone the CRUK theme repo
 ```
 $ git clone --recursive https://github.com/PyBossa/cancer-default-theme pybossa/pybossa/themes/cancer-default-theme
 ```
 
 
-###### Edit the VagrantFile to include the image, styles and scripts needed to run the project
+#### Edit the VagrantFile to include the image, styles and scripts needed to run the project
 First  go to the pybossa folder
 
 ```
@@ -57,7 +57,7 @@ And note that `PATH_TO_DIRECTORY_CONTAINING_THIS_README_FILE` refers to the canc
 ```
 
 
-###### Edit the settings file to use the CRUK theme
+#### Edit the settings file to use the CRUK theme
 Edit 'settings_local.py.tmpl'
 
 Add the following line at the end of the file.
@@ -67,24 +67,24 @@ THEME = 'cancer-default-theme'
 ```
 
 
-###### Start Vagrant
+#### Start Vagrant
 ```
 $ vagrant up
 $ vagrant ssh
 $ python run.py
 ```
 
-###### Create an Account on pybossa
+#### Create an Account on pybossa
 - Go to `http://localhost:5000`
 - Click `sign in` then `create a new account`
 - Enter the details needed to create an account
 
-###### Take note of your api key
+#### Take note of your api key
 - Click on the user icon in the top right of pybossa
 - Choose `My Profile` from the drop down menu
 - Copy and save the `API Key` shown on your profile page
 
-###### Upload the CRUK Project to pybossa
+#### Upload the CRUK Project to pybossa
 Starting from the folder where this readme file is located (normally cancerresearchuk-pybossa)
 
 Note: the location of your python2.7 executable may be different
@@ -99,7 +99,7 @@ $ pbs --server http://localhost:5000 --api-key [YOUR_API_KEY_HERE] add_tasks --t
 $ pbs --server http://localhost:5000 --api-key [YOUR_API_KEY_HERE] update_project
 ```
 
-###### Visit pybossa and publish your project
+#### Visit pybossa and publish your project
 - Click on the user icon in the top right of pybossa
 - Choose `My projects` from the drop down menu
 - Click `More info` on the CRUK Trailblazer project
