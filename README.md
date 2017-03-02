@@ -5,9 +5,6 @@
 This repository contains all the code needed to install and run the [Cancer Research UK](http://www.cancerresearchuk.org/) 
 funded Citizen Science project within a [pybossa](http://pybossa.com/) server. 
 
-**Please note that there is a known problem with the current source code, resulting in the system not starting correctly.**
-**We are working on resolving this and will update this repo with a fix as soon as possible.**
-**We suggest waiting till the fix is available before trying to download and install.**
 
 ## Running your own pybossa server using vagrant
 
